@@ -5,6 +5,7 @@
 ## Install
 
 ```bash
+yarn add react-configurable-event-timeline
 npm install --save react-configurable-event-timeline
 ```
 

@@ -1,10 +1,10 @@
 {
   "name": "react-configurable-event-timeline",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
-  "author": "TEST",
+  "description": "A flexible, small size event timeline component for React.",
+  "author": "pauliusp@fastmail.com",
   "license": "MIT",
-  "repository": "TEST/event-timeline",
+  "repository": "https://github.com/qwyt/react-configurable-event-timeline",
   "main": "build/index.js",
   "module": "build/index.modern.js",
   "source": "src/index.tsx",

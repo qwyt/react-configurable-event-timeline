@@ -1,4 +1,3 @@
-/* eslint-disable spaced-comment,quotes,no-trailing-spaces */
 import * as React from "react";
 import { CSSProperties } from "react";
 

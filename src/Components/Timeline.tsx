@@ -1,26 +1,21 @@
-/* eslint-disable no-trailing-spaces,no-unused-vars,indent,object-curly-spacing,quotes,react/jsx-indent,react/jsx-tag-spacing,semi,react/jsx-curly-brace-presence,react/jsx-closing-tag-location,prefer-const,padded-blocks,brace-style,spaced-comment,react/jsx-closing-bracket-location */
-// eslint-disable-next-line node/no-unsupported-features
-
-// eslint-disable-next-line node/no-unsupported-features
 import styles from "./styles.module.css";
 import * as React from "react";
-import { ISharedProps, ITimelineProps } from "./types";
-import { TimelineNode } from "./TimelineNode";
-import { TimelineItem } from "./TimelineItem";
-import { ITimelineContext, TimelineContext } from "./utils";
+import {ISharedProps, ITimelineProps} from "./types";
+import {TimelineNode} from "./TimelineNode";
+import {TimelineItem} from "./TimelineItem";
+import {ITimelineContext, TimelineContext} from "./utils";
 
 const BuildChildren = (children: any[], props: any, trailingStart: boolean) => {
   // return React.Children.map(children, el => {
-
   let mappedChildren = children.map((el: any, i: number) => {
 
-    let childProps = { ...props, index: i < children.length - 1 ? i + (trailingStart ? 1 : 0) : -1 };
+    let childProps = {...props, index: i < children.length - 1 ? i + (trailingStart ? 1 : 0) : -1};
     childProps = Object.assign(childProps, el.props);
     return React.createElement(el.type, childProps);
   });
 
   if (trailingStart) {
-    mappedChildren.unshift(<TimelineItem index={0} />);
+    mappedChildren.unshift(<TimelineItem index={0}/>);
   }
 
   return mappedChildren;
@@ -31,7 +26,7 @@ export function Timeline(props: ITimelineProps & ISharedProps) {
   let trailingLines = props.trailingLines ? props.trailingLines === true ? {
     start: true,
     end: true
-  } : props.trailingLines : { start: false, end: false };
+  } : props.trailingLines : {start: false, end: false};
 
   let classes: string[] = [styles.container];
 
@@ -41,8 +36,7 @@ export function Timeline(props: ITimelineProps & ISharedProps) {
 
   if (props.horizontal) {
     classes.push(styles.horizontal);
-  }
-  else {
+  } else {
     classes.push(styles.vertical);
   }
 
@@ -66,14 +60,12 @@ export function Timeline(props: ITimelineProps & ISharedProps) {
 
       if (cc.type === TimelineNode) {
         useRight = true;
-      }
-      else {
+      } else {
         // rightCounter++;
 
         if (cc.props.left) {
           hideLeft = false;
-        }
-        else {
+        } else {
           hideRight = false;
         }
 
