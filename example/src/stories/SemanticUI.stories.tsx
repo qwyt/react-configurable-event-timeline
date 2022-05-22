@@ -41,6 +41,9 @@ export default {
 const InfoCard = (props: { pointing: "left" | "right" | "above" | "below", color: SemanticCOLORS, labelColor: SemanticCOLORS | string, time: string, title: string, description: string, tags: string[] }) => {
 
   const { pointing, color, labelColor, time, title, description, tags } = { ...props };
+  // @ts-ignore
+  // @ts-ignore
+  // @ts-ignore
   return <Card fluid raised color={color}>
     <Card.Content>
 
@@ -57,6 +60,7 @@ const InfoCard = (props: { pointing: "left" | "right" | "above" | "below", color
       <Divider />
       <Label.Group color={color}>
         {tags.map((tag, i) => (
+          // @ts-ignore
           <Label key={i.toString()}>
             {tag}
           </Label>
@@ -68,9 +72,11 @@ const InfoCard = (props: { pointing: "left" | "right" | "above" | "below", color
 };
 
 const SemanticUIExample: ComponentStory<typeof Timeline> = (args) => {
+  // @ts-ignore
   return <Timeline {...args} borderColor={"#7c7c7c"}>
     <TimelineItem>
       <TimelineCircleNode color={"#B413EC"}>
+        {/*// @ts-ignore*/}
         <Icon name={"user"} size={"large"} style={{ color: "white" }} />
         {/*<div><span className="material-icons md-18">email</span></div>*/}
       </TimelineCircleNode>
@@ -91,6 +97,7 @@ const SemanticUIExample: ComponentStory<typeof Timeline> = (args) => {
     <TimelineItem>
 
       <TimelineCircleNode color={"rgb(250, 181, 50)"}>
+        {/*// @ts-ignore*/}
         <Icon name={"shopping basket"} size={"large"} style={{ color: "white" }} />
         {/*<div><span className="material-icons md-18">email</span></div>*/}
       </TimelineCircleNode>
@@ -109,6 +116,7 @@ const SemanticUIExample: ComponentStory<typeof Timeline> = (args) => {
 
     <TimelineItem>
       <TimelineCircleNode color={"rgb(238, 102, 42)"}>
+        {/*// @ts-ignore*/}
         <Icon name={"edit outline"} size={"large"} style={{ color: "white" }} />
       </TimelineCircleNode>
 
@@ -126,6 +134,7 @@ const SemanticUIExample: ComponentStory<typeof Timeline> = (args) => {
 
     <TimelineItem>
       <TimelineCircleNode color={"rgb(213, 37, 41)"}>
+        {/*// @ts-ignore*/}
         <Icon name={"shipping fast"} size={"large"} style={{ color: "white" }} />
       </TimelineCircleNode>
 
