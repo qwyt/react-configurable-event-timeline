@@ -149,9 +149,15 @@
   margin-right: 10px;
 }
 
+/*.nodeContainer.hidden .connector {*/
+/*  min-width: 10px !important;*/
+/*  width: 10px !important;*/
+/*}*/
+
 .horizontal.dashed .hidden > .connector:first-child {
   margin-left: 10px;
 }
+
 
 .horizontal.dashed .hidden > .connector:last-child {
   margin-right: 10px;
@@ -161,9 +167,13 @@
   /*flex-grow: 1;*/
   height: 100%;
   width: 100%;
-  min-width: 50px;
+  min-width: 30px;
   display: flex;
   justify-content: center;
+}
+
+.hidden > .connector{
+  min-width: 10px !important;
 }
 
 .connector > div {
@@ -193,6 +203,10 @@
 .itemContainer {
   display: flex;
   flex-grow: 1;
+}
+
+.itemContainer.hidden{
+  flex-grow: 0.25;
 }
 
 /*.responsive .itemContainer{*/
@@ -290,8 +304,8 @@
   min-height: 50px;
 }
 
-.placeHolder.hidden {
-
+.nodeContainer.hidden {
+  /*width: 10px !important;*/
 }
 
 .round .nodeChildrenContainer {

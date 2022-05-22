@@ -86,15 +86,15 @@ export function TimelineNodeInternal(props: ITimelineNodeInternalProps & IShared
   let nodeChildrenContainerStyle: CSSProperties = {};
 
   if (props.border === "round") {
-    nodeChildrenContainerStyle.height = `${circleNodeSize}px`;
-    nodeChildrenContainerStyle.lineHeight = `${circleNodeSize}px`;
+    // nodeChildrenContainerStyle.height = `${circleNodeSize}px`;
+    // nodeChildrenContainerStyle.lineHeight = `${circleNodeSize}px`;
     if (props.stretch) {
       nodeChildrenContainerStyle.minWidth = circleNodeSize * 1.5;
     }
   }
 
   return <div className={nodeContainerClasses.join(" ")}>
-    {(trailingLineStart && props.index === 0) && <div style={connectorContainerStyle} className={styles.connector}>
+    {(trailingLineStart && props.index === 0) && <div style={connectorContainerStyle} className={`${styles.connector} ${trailingLineStart ? styles.trailing : ""}`}>
       <div style={connectorStyles} />
     </div>}
 
@@ -107,7 +107,7 @@ export function TimelineNodeInternal(props: ITimelineNodeInternalProps & IShared
     </div>
 
     {((trailingLineEnd && props.index === -1) || props.index !== -1) &&
-    <div style={connectorContainerStyle} className={styles.connector}>
+    <div style={connectorContainerStyle} className={`${styles.connector} ${trailingLineEnd ? styles.trailing : ""}`}>
       <div style={connectorStyles} />
     </div>}
   </div>;

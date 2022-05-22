@@ -54,8 +54,8 @@ export function TimelineItem(props: ITimelineItemProps & ISharedProps) {
   if (props.width !== undefined) {
     itemContainerStyle = { flexGrow: props.width };
   }
-
-  return <li className={[styles.itemContainer].join(" ")} style={itemContainerStyle}>
+  let isHidden = (globalProps.trailingLines.start && props.index === 0) ||  (globalProps.trailingLines.end && props.index === -1)
+  return <li className={[styles.itemContainer, isHidden ? styles.hidden : undefined].join(" ")} style={itemContainerStyle}>
     {/*<div className={"LEFT"}>{BuildChildren(leftItems, props)}</div>*/}
     <div
       className={`${styles.placeHolder} ${styles.left} ${globalProps.hideLeft ? styles.hidden : undefined}`}

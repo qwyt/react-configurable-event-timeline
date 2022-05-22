@@ -1,6 +1,6 @@
 /* eslint-disable quotes,semi,indent */
 import * as React from "react";
-import styles from "./styles.module.css";
+import styles from "./Components/styles.module.css";
 
 import {
   Timeline
