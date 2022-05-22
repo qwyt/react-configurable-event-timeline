@@ -107,7 +107,7 @@ const StreakTimeline: ComponentStory<typeof Timeline> = (args) => {
         </TimelineItem>
         <TimelineItem>
           <TimelineCircleNode>
-            <i className="material-icons" style={{ color: "green", fontWeight: "bold", fontSize: 18 }}>
+            <i className="material-icons" style={{ color: "green", fontWeight: "bold", fontSize: 36 }}>
               check
             </i>
             {/*<div><span className="material-icons md-18">email</span></div>*/}
